@@ -10,13 +10,14 @@
  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="navigation-bar">
+  <div class="whole-webpage">
+    <div class="navigation-bar">
       <h1 class="logo-tag">
         <a>SMART EARNINGS</a></h1>
     <div class="navbar" id="mynavbar">
       <ul class="navbar-ul">
         <li><a class="nav-li"href="#">Home</a></li>
-        <li><a class="nav-li" href="#">Services</a></li>
+        <li><a class="nav-li" href="printoutpage/printout.html">Services</a></li>
         <li><a class="nav-li"  href="#">Your Orders</a></li>
         <li><a class="nav-li"  href="#">FAQ's</a></li>
         <li><a class="nav-li"  href="#">Contact</a></li>
@@ -27,27 +28,61 @@
       <a href="javascript:void(0);" class="icon-exit-icon" onclick="toggleNavbar()">
         <i class="fa fa-times"></i>
       </a>
-
     </div>
     <hr>
   </div>
+  <div class="main-content" id="main-content">
+   
+    <h1 class="main-content-headlines"> One platform for your all printings </h1>
+    <button class="get-started-button">Get started</button>
+    <div class="four-cards-homepage">
+      <div class="icon-box">
+        <div class="icon"><i class="fa fa-solid fa-print"></i></i></div>
+        <h4 class="icon-box-title">Page printing</h4>
+        <p class="icon-box-description">Get your Loose paper printed at Rs 1.5 per page </p>
+      </div>
+      <div class="icon-box">
+        <div class="icon"><i class="fa fa-book"></i></div>
+        <h4 class="icon-box-title">Hard Binding</h4>
+        <p class="icon-box-description">Get your Loose paper printed at Rs 5 per page and Rs 100 for Binding </p>
+      </div>
+      <div class="icon-box">
+        <div class="icon"><i class="fa fa-paperclip"></i></div>
+        <h4 class="icon-box-title">Spiral Binding</h4>
+        <p class="icon-box-description">Get your Loose paper printed at Rs 1.5 per page and Rs  20 for spiral </p>
+      </div>
+      <div class="icon-box">
+        <div class="icon"><i class="fa fa-file-photo-o"></i></div>
+        <h4 class="icon-box-title">Color printing </h4>
+        <p class="icon-box-description">Get your Loose paper printed at Rs 10 per page </p>
+      </div>
+    </div>
+    </div>
+  </div>
+ 
   <script>
     function myFunction() {
       var x = document.getElementById("mynavbar");
       if (x.className === "navbar") {
         x.className += " responsive";
+        document.getElementById("main-content").style.opacity=0;
       } else {
         x.className = "navbar";
       }
+
     }
     function toggleNavbar()
     {
+      document.getElementById("main-content").style.opacity=1;
       var x = document.getElementById("mynavbar");
       if (x.className === "navbar") {
         x.className += " close";
+        
+
       } else {
         x.className = "navbar";
       }
+     
 
     }
     </script>

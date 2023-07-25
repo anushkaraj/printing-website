@@ -1,6 +1,9 @@
 .whole-webpage {
   position: relative;
   height: 100%;
+  margin-top: 30px;
+
+
 }
 
 .navigation-bar {
@@ -58,66 +61,29 @@
   display: none;
 }
 
-.main-content {
+.main-content-printout-page {
   width: 100%;
   height: 100%;
   position: absolute;
   top: 150%;
-  left: 35%;
+  left: 10%;
 }
 
-.main-content-headlines {
-  width: 35%;
-  margin: 0;
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 72px;
-  color: #124265;
-  font-family: "Poppins", sans-serif;
-}
-
-.get-started-button {
-  position: absolute;
-  left: 7%;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 7px;
-  transition: 0.5s;
-  margin-top: 30px;
-  color: #fff;
-  background: #2487ce;
-  border: 1px solid white;
-}
-
-.four-cards-homepage {
-  width: 100%;
-  position: absolute;
-  top: 300%;
-  left: -20%;
-  display: flex;
-  flex-direction: row;
-}
-
-.icon-box {
-  width: 15%;
-  padding: 50px 30px;
-  position: relative;
+.icon-box-printoutpage {
+  width: 25%;
+  float: left;
+  border-color: #fff;
+  text-align: center;
+  padding: 70px 20px 0px 20px;
+  transition: all ease-in-out 0.3s;
   background: #fff;
-  box-shadow: 0 0 29px 0 rgba(18, 66, 101, 0.08);
-  transition: all 0.3s ease-in-out;
-  border-radius: 8px;
-  z-index: 1;
-  margin: 10px;
-
+  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
+  margin: 20px;
 }
 
-.icon-box>.icon {
+.icon-box-printoutpage>.icon {
   margin-bottom: 20px;
-  padding-top: 10px;
+
   display: inline-block;
   transition: all 0.3s ease-in-out;
   font-size: 36px;
@@ -125,19 +91,37 @@
   color: #16507b;
 }
 
-.icon-box>.icon-box-title {
+.icon-box-printoutpage>.icon-box-title {
   color: #124265;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 18px;
 }
 
-.icon-box>.icon-box-description {
+.icon-box-printoutpage>.icon-box-description {
   font-size: 15px;
   line-height: 28px;
   margin-bottom: 0px;
   font-family: "Open Sans", sans-serif;
   color: rgb(68, 68, 68);
+}
+
+.icon-box-description-price {
+  text-decoration: none;
+  font-size: 18px;
+  color: #124265;
+  font-weight: 800;
+}
+
+.upload-pdf-button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 5px;
+  color: #fff;
+  background-color: #124265;
+  border: 1px solid #fff;
+
+
 }
 
 @media screen and (max-width:1300px) {
@@ -253,22 +237,10 @@
 
   }
 
-  .main-content {
-    position: absolute;
-    top: 12%;
-    left: 22%;
-  }
-
-  .main-content-headlines {
-    font-size: 23px;
-    line-height: 36px;
-    width: 60%;
-  }
-
-  .four-cards-homepage {
-    flex-direction: column;
-    top: 35%;
-    left: -15%;
+  .main-content-printout-page {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
   }
 
   .icon-box {
