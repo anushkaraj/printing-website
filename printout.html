@@ -38,7 +38,7 @@
       </a>
     </div>
   </div>
-  <div class="main-content-printout-page">
+  <div class="main-content-printout-page" id="main-content-printout-page">
     <div class="icon-box-printoutpage">
               <div class="icon">
                 <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
@@ -130,7 +130,7 @@
       var x = document.getElementById("mynavbar");
       if (x.className === "navbar") {
         x.className += " responsive";
-        document.getElementById("main-content").style.opacity=0;
+        document.getElementById("main-content-printout-page").style.opacity=0;
       } else {
         x.className = "navbar";
       }
@@ -138,12 +138,10 @@
     }
     function toggleNavbar()
     {
-      document.getElementById("main-content").style.opacity=1;
+      document.getElementById("main-content-printout-page").style.opacity=1;
       var x = document.getElementById("mynavbar");
       if (x.className === "navbar") {
         x.className += " close";
-        
-
       } else {
         x.className = "navbar";
       }
