@@ -1,0 +1,98 @@
+<!-- upload_pdf.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Earnings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- adding google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+   <link rel="stylesheet" href="style_upload_pdf.css">
+  </head>
+</head>
+<body>
+  <script>
+    // Get the 'type' query parameter from the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const type = urlParams.get('type');
+    // Now you can use the 'type' variable in this page
+    console.log("type in upload pdf is ", type);
+  </script>
+  <div class="upload_pdf"> 
+    <div class="upload_pdf_section">
+       <h1 class="upload_pdf_headline">
+          Upload Pdf File
+       </h1>
+       <form id="order-form" action="../index.html" method="post" enctype="multipart/form-data">
+        <label for="pdf-file" class="select_Pdf_button">Select PDF File</label>
+        <input type="file" name="pdf_file" accept=".pdf" id="pdf-file" class="select_Pdf_button" style="display:none;">
+        <button type="submit" class="placeorder" onclick="return placeOrderbutton()">Place Order</button>
+        <button type="submit" class="calculate_cost"onclick="return placeOrderbutton()" >Calculate Cost</button>
+      </form>
+     
+  </div>
+  <input type="hidden" name="submit_form" id="submit-form-input">
+  <div id="myModal" class="modal" style="display:none;">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h4 class="confirm_statement">Please confirm the following things</h4>
+     <div id="file-name-display"></div>
+     <h3 class="confirm_statement">Cost-</h3>
+     
+
+     <p>
+
+     </p>
+      <button onclick="submitForm()">Confirm</button>
+    </div>
+  
+  </div>
+  
+  </div>
+ 
+
+<script>
+  function placeOrderbutton() {
+    var fileInput = document.querySelector('input[type="file"]');
+    if (fileInput.files.length === 0) {
+      alert("Please upload a PDF file.");
+      return false; // Prevent form submission if no file is selected
+    }
+
+    // Get the selected file name and display it in the 'file-name-display' div
+    const selectedFile = fileInput.files[0];
+    const fileNameDisplay = document.getElementById('file-name-display');
+    fileNameDisplay.textContent = `Selected File: ${selectedFile.name}`;
+    
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+   var span = document.getElementsByClassName("close")[0];
+  span.onclick = function() {
+  modal.style.display = "none";
+ }
+  // When the user clicks anywhere outside of the modal, close it
+ window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+return false;
+    // Return false to prevent form submission
+    
+  }
+  function submitForm() {
+    // Set the value of the hidden input field to "1" to indicate that the form should be submitted
+    document.getElementById("submit-form-input").value = "1";
+    // Submit the form
+    document.getElementById("order-form").submit();
+  }
+</script>
+
+  
+ 
+ 
+</body>
+</html>

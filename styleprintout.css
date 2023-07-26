@@ -120,8 +120,16 @@
   color: #fff;
   background-color: #124265;
   border: 1px solid #fff;
+}
 
+.icon-box-printoutpage>.icon {
+  position: relative;
+}
 
+.icon-box-printoutpage>.icon i {
+  position: absolute;
+  top: 30%;
+  left: 30%;
 }
 
 @media screen and (max-width:1300px) {
@@ -247,6 +255,7 @@
   .icon-box-printoutpage {
     width: 70%;
   }
+
 
 
 }
