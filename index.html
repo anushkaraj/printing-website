@@ -1,13 +1,16 @@
 <!DOCTYPE html>
+{% load static  %}
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smart Earnings</title>
+  <link rel="stylesheet"  type="text/css" href="{% static 'css/style.css' %}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- adding google fonts-->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
- <link rel="stylesheet" href="style.css">
+ {% comment %} <link rel="stylesheet" href="style.css"> {% endcomment %}
+ 
 </head>
 <body>
   <div class="whole-webpage">
@@ -16,9 +19,9 @@
         <a>SMART EARNINGS</a></h1>
     <div class="navbar" id="mynavbar">
       <ul class="navbar-ul">
-        <li><a class="nav-li"href="#">Home</a></li>
-        <li><a class="nav-li" href="printoutpage/printout.html">Services</a></li>
-        <li><a class="nav-li"  href="#">Your Orders</a></li>
+        <li><a class="nav-li"href="" id="current">Home</a></li>
+        <li><a class="nav-li" href="/printout/">Services</a></li>
+        <li><a class="nav-li"  href="/order/">Your Orders</a></li>
         <li><a class="nav-li"  href="#">FAQ's</a></li>
         <li><a class="nav-li"  href="#">Contact</a></li>
       </ul>
@@ -29,7 +32,7 @@
         <i class="fa fa-times"></i>
       </a>
     </div>
-    <hr>
+    
   </div>
   <div class="main-content" id="main-content">
    
